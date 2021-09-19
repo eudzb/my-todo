@@ -111,6 +111,7 @@ export class HomeComponent implements OnInit {
     const todosConcerned = this.todos.filter(todo => todo.category.label === categoryProgression.categoryLabel);
     const nbTodosConcerned = todosConcerned.filter(todo => todo.checked).length;
     categoryProgression.progression = `${Math.round((nbTodosConcerned / categoryProgression.total) * 100).toFixed(0)}%`;
+    localStorage.setItem('progressionCategories', JSON.stringify(this.progressionCategories));
   }
 
   onReset() {
