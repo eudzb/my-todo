@@ -1,0 +1,161 @@
+@import '../../../assets/variables';
+
+.header-section {
+  display: grid;
+  grid-template-columns: 64px 2fr 2fr 2fr 2fr 2fr 64px;
+  grid-column-gap: 3rem;
+
+  .progress-container {
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.04);
+    height: 64px;
+    padding: 8px 16px 12px;
+    position: relative;
+
+    span {
+      font-size: .8em;
+    }
+
+    svg {
+      position: absolute;
+      top: 8px;
+      right: 16px;
+      fill: $primary-4;
+    }
+  }
+}
+
+.no-content-category {
+  color: rgba($primary-4, 0.2);
+}
+
+.todo-element {
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 6px 0;
+  transition: 0.3s;
+}
+
+.todo-element:hover {
+  background-color: rgba(255, 255, 255, 0.01);
+}
+
+.custom-input {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.custom-input::placeholder {
+  color: $primary-4;
+}
+
+.todo-checked {
+  color: rgba($primary-4, 0.3) !important;
+  font-weight: 300 !important;
+  text-decoration: line-through;
+  transition: 0.3s ease;
+}
+
+.todo-checked::before {
+  background: rgba($primary-4, 0.3) !important;
+}
+
+.progress-custom {
+  width: 100%;
+  background-color: $primary-2;
+  height: .6rem;
+}
+
+.delete-btn {
+  border-radius: 12px;
+  min-width: 64px;
+  min-height: 64px;
+  text-align: center;
+  transition: 0.3s ease;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: transparent;
+
+  svg {
+    color: $primary-3;
+    transition: 0.3s ease;
+  }
+}
+
+.delete-btn:hover {
+  background-color: rgba(214, 100, 100, 0.5);
+
+  svg {
+    color: rgba(white, 0.7);
+  }
+}
+
+.delete-btn:focus {
+  background-color: rgba(214, 100, 100, 0.8);
+
+  svg {
+    color: white;
+  }
+}
+
+.day-section {
+  border-radius: 12px;
+  min-width: 64px;
+  min-height: 64px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.04);
+
+  span {
+    font-size: .6em;
+    color: $primary-4;
+  }
+
+  b {
+    font-size: 1.1em;
+    color: $primary-4;
+  }
+}
+
+.form-section {
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.04);
+  padding: 16px;
+
+  button > span {
+    display: block;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+
+  hr {
+    background: rgba(255, 255, 255, 0.5);
+  }
+}
+
+:host ::ng-deep .dropdown-toggle::after {
+  margin-left: 0.555em;
+}
+
+:host ::ng-deep .dropdown-menu {
+  background-color: $primary-2;
+}
+
+:host ::ng-deep .dropdown-item:hover {
+  color: $primary-3;
+  background-color: $primary-1;
+  transition: 0.3s ease;
+}
+
+.category-todo {
+  height: 16px;
+  width: 6px;
+  transition: 0.3s ease;
+}
+
+.pointer {
+  cursor: pointer;
+}
